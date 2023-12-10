@@ -14,9 +14,9 @@ spec:
               values:
                 addonChart: s3-chart
                 # anything not staging or prod use this version
-                addonChartVersion: 1.0.6
+                addonChartVersion: 4.2.0
                 #addonChartRepository: https://aws.github.io/eks-charts
-                addonChartRepository: https://public.ecr.aws/aws-controllers-k8s/s3-chart
+                addonChartRepository: oci://public.ecr.aws/aws-controllers-k8s
               selector:
                 matchExpressions:
                   - key: akuity.io/argo-cd-cluster-name
@@ -30,13 +30,13 @@ spec:
                 matchLabels:
                   environment: staging
               values:
-                addonChartVersion: 1.0.6
+                addonChartVersion: 4.2.0
           - clusters:
               selector:
                 matchLabels:
                   environment: prod
               values:
-                addonChartVersion: 1.0.6
+                addonChartVersion: 4.2.0
   template:
     metadata:
       name: addon-{{name}}-{{values.addonChart}}
