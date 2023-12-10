@@ -16,7 +16,7 @@ spec:
                 # anything not staging or prod use this version
                 addonChartVersion: 1.0.6
                 #addonChartRepository: https://aws.github.io/eks-charts
-                addonChartRepository: oci://public.ecr.aws/aws-controllers-k8s
+                addonChartRepository: oci://public.ecr.aws/aws-controllers-k8s/s3-chart
               selector:
                 matchExpressions:
                   - key: akuity.io/argo-cd-cluster-name
