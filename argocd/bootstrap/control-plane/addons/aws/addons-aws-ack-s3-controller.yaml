@@ -14,7 +14,7 @@ spec:
               values:
                 addonChart: s3-chart
                 # anything not staging or prod use this version
-                addonChartVersion: 4.2.0
+                addonChartVersion: 1.0.6
                 #addonChartRepository: https://aws.github.io/eks-charts
                 addonChartRepository: oci://public.ecr.aws/aws-controllers-k8s
               selector:
@@ -30,13 +30,13 @@ spec:
                 matchLabels:
                   environment: staging
               values:
-                addonChartVersion: 4.2.0
+                addonChartVersion: 1.0.6
           - clusters:
               selector:
                 matchLabels:
                   environment: prod
               values:
-                addonChartVersion: 4.2.0
+                addonChartVersion: 1.0.6
   template:
     metadata:
       name: addon-{{name}}-{{values.addonChart}}
