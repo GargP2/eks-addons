@@ -21,7 +21,7 @@ spec:
                   - key: akuity.io/argo-cd-cluster-name
                     operator: NotIn
                     values: [in-cluster]
-                  - key: nable_aws_load_balancer_controller
+                  - key: enable_aws_load_balancer_controller
                     operator: In
                     values: ['true']
           - clusters:
